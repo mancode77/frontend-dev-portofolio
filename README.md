@@ -11,7 +11,18 @@ Sebelum memulai, pastikan Anda memiliki pengetahuan dasar tentang HTML, CSS, dan
 Ikuti langkah-langkah instalasi berikut untuk memulai dengan proyek ini:
 
 ```bash
+// Jika menggunakan https
 git clone https://github.com/mancode77/frontend-dev-portofolio.git
+
+atau
+
+// Jika menggunakan ssh
+git clone git@github.com:mancode77/frontend-dev-portofolio.git
+
+atau 
+
+// Jika menggunakan GitHub CLI
+gh repo clone mancode77/frontend-dev-portofolio
 ```
 
 ## Penggunaan
