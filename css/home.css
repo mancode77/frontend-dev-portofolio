@@ -1,0 +1,111 @@
+/* General Style */
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+    height: 1000px;
+}
+
+/* Home Style */
+main {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+#home {
+    background-image: url(./../images/hero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section h3 {
+  font-size: 33px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+section h1 {
+  margin: 14px 0px 18px 0;
+  font-size: 45px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #000;
+}
+
+section p {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 45px;
+}
+
+section a {
+  padding: 9px 30px;
+  border-radius: 4px;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 14px;
+}
+
+section .btn1 {
+  background-color: #fff;
+  color: black;
+}
+
+section .btn1:hover {
+  background-color: #f0f32e;
+  transition: all 0.3s linear;
+}
+
+section .btn2 {
+  background-color: #00fc13;
+  color: black;
+}
+
+section .btn2:hover {
+  background-color: #b200fc;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+
+.nameslideshow:after {
+  color: #00fc13;
+  animation: changename 7s infinite linear;
+  content: "";
+}
+
+@keyframes changename {
+  0% {
+    content: "Bangun";
+  }
+
+  25% {
+    content: "Makan";
+  }
+
+  50% {
+    content: "Main";
+  }
+
+  75% {
+    content: "Tidur";
+  }
+
+  100% {
+    content: "Berak";
+  }
+}
