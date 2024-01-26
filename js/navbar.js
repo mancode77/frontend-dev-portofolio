@@ -22,3 +22,13 @@ openHamburger.removeEventListener("click", () =>
 closeHamburger.removeEventListener("click", () =>
   hamburgerEvent("none", "none", "block")
 );
+
+window.onscroll = function() {scrollFunction()}
+
+function scrollFunction() {
+    if (document.body.scrollTop || document.documentElement.scrollTop > 130){
+        document.getElementById('navbar').style.backgroundColor = 'rgb(27, 24, 24)';
+    } else {
+        document.getElementById('navbar').style.backgroundColor = 'transparent';
+    }
+}
