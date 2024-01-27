@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Dev</title>
 
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/vegas.min.css" rel="stylesheet" />
+
     <!-- Navbar Style -->
     <link rel="stylesheet" href="./css/navbar.css" />
 
     <!-- Home Style -->
     <link rel="stylesheet" href="./css/home.css" />
+
+    <!-- About Style -->
+    <link href="./css/about.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar -->
@@ -19,8 +27,8 @@
           <a href="./index.html">FE DEV</a>
         </div>
         <div class="navigation-items" id="navigation-items">
-          <a href="">Home</a>
-          <a href="">About</a>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
           <a href="">Projects</a>
           <a href="">Contact Me</a>
         </div>
@@ -43,6 +51,47 @@
       </section>
     </main>
     <!-- Home Page -->
+
+    <!-- About Page With Bootstrapt -->
+    <section class="about-section section-padding" id="about">
+      <div class="section-overlay"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-12">
+            <div class="ratio ratio-1x1">
+              <img class="custom-video" src="./images/hero.png" alt="" />
+
+              <div class="about-image-info d-flex flex-column">
+                <h4 class="mt-auto">Solid Solid Solid</h4>
+
+                <h4>Ngoding Ngoding Ngoding</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-12 mt-4 mt-lg-0 mx-auto">
+            <em class="text-white">frontend.co</em>
+
+            <h2 class="text-white mb-3">FE DEV</h2>
+
+            <p class="text-white">
+             FE Dev adalah komunitas belajar frontend developer untuk semua kalangan.
+            </p>
+
+            <p class="text-white">
+             Kami belajar teknologi HTML, CSS, Bootstrap, Tailwind, Javascript, React Js, Node Js, Express, Next Js, MongoDB.
+            </p>
+
+            <a
+              href="#barista-team"
+              class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"
+              >Yok gabung</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Page With Bootstrapt  -->
 
     <!-- Navigation Script -->
     <script src="./js/navbar.js"></script>

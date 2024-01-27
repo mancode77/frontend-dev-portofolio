@@ -10,6 +10,7 @@ body {
 /* Navigation Style*/
 .navigation-header {
   position: fixed;
+  z-index: 999;
   width: 100%;
   background-color: transparent;
   padding: 0 15px;
@@ -76,10 +77,15 @@ nav {
     position: absolute;
     right: 0;
     top: 58px;
-    background-color: rgb(73, 51, 153);
+    background-image: url(./../images/hero.png);
     width: 100%;
     height: calc(100vh - 58px);
     padding-top: 60px;
     gap: 10vh;
+  }
+
+  .navigation-items a {
+    font-size: 2rem;
+    font-weight: 900;
   }
 }

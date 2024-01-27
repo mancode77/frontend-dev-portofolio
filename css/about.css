@@ -1,0 +1,256 @@
+/* General Style */
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* About Style */
+:root {
+    --white-color: #ffffff;
+    --primary-color: #BC6C25;
+    --secondary-color: #DDA15E;
+    --section-bg-color: #b78752;
+    --custom-btn-bg-color: #BC6C25;
+    --custom-btn-bg-hover-color: #DDA15E;
+    --dark-color: #000000;
+
+    --h1-font-size: 68px;
+    --h2-font-size: 46px;
+    --h3-font-size: 32px;
+    --h4-font-size: 28px;
+    --h5-font-size: 24px;
+    --h6-font-size: 22px;
+    --p-font-size: 20px;
+    --btn-font-size: 16px;
+    --form-btn-font-size: 18px;
+    --menu-font-size: 16px;
+
+    --border-radius-large: 100px;
+    --border-radius-medium: 20px;
+    --border-radius-small: 10px;
+
+    --font-weight-thin: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+/* Typography about style */
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about h5,
+#about h6{
+    font-weight: var(--font-weight-bold);
+}
+
+#about h1 {
+    font-size: var(--h1-font-size);
+}
+
+#about h2 {
+    font-size: var(--h2-font-size);
+}
+
+#about h3 {
+    font-size: var(--h3-font-size);
+}
+
+#about h4 {
+    font-size: var(--h4-font-size);
+}
+
+#about h5 {
+    font-size: var(--h5-font-size);
+}
+
+#about h6 {
+    font-size: var(--h6-font-size);
+}
+
+#about p {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+}
+
+#about ul li {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+}
+
+#about a,
+#about button {
+    touch-action: manipulation;
+    transition: all 0.3s;
+}
+
+#about a {
+    display: inline-block;
+    color: rgb(241, 241, 40);
+    text-decoration: none;
+}
+
+#about a:hover {
+    color: var(--link-hover-color);
+}
+
+#about b,
+#about strong {
+    font-weight: var(--font-weight-bold);
+}
+
+
+/* Section About */
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-bg {
+    background-color: var(--section-bg-color);
+}
+
+.section-overlay {
+    background-color: var(--dark-color);
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+}
+
+.section-overlay+.container {
+    position: relative;
+    z-index: 22;
+}
+
+.back-top-icon {
+    font-size: var(--h2-font-size);
+}
+
+/* Button about style */
+.custom-btn {
+    background: var(--custom-btn-bg-color);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-large);
+    color: var(--white-color);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: normal;
+    transition: all 0.3s;
+    padding: 12px 28px;
+}
+
+.custom-btn:hover {
+    background: var(--custom-btn-bg-hover-color);
+    color: var(--white-color);
+}
+
+.custom-border-btn {
+    background: transparent;
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+}
+
+.custom-border-btn:hover {
+    background: var(--white-color);
+    color: var(--secondary-color);
+}
+
+.custom-btn-bg-white {
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.custom-btn-italic {
+    font-style: italic;
+}
+
+/* About style */
+.about-section {
+    background-image: url(./../images/hero.png);
+    position: relative;
+}
+
+.about-section .ratio {
+    border-radius: var(--border-radius-medium);
+}
+
+.custom-video {
+    border-radius: var(--border-radius-medium);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-image-wrap {
+    border-radius: var(--border-radius-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image-info {
+    border-radius: var(--border-radius-medium);
+    bottom: 0;
+    height: auto;
+    padding: 40px;
+}
+
+.about-image-info h4 {
+    color: #fff
+}
+
+.about-section h6 {
+    color: var(--secondary-color);
+}
+
+.team-block-wrap {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius-medium);
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+    cursor: pointer;
+}
+
+.team-block-wrap:hover .team-block-image {
+    transform: scale(1.2);
+}
+
+.team-block-image-wrap {
+    width: 100%;
+}
+
+.team-block-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.team-block-info {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(188, 108, 37, 1));
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+}
+
+.team-block-info .badge {
+    margin: auto;
+    top: 2px;
+    bottom: 0;
+}
