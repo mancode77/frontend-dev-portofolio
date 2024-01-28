@@ -1,0 +1,95 @@
+/* General Style */
+*,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Portofolio Style */
+#portofolio {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./../images/hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.continer-portofolio {
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+}
+
+.title-portofolio {
+  text-align: center;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.continer-portofolio .slider {
+  font-size: 0px;
+  white-space: nowrap;
+}
+
+.slider {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slider img {
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  width: calc(100% / 3);
+}
+
+.slider img:first-child {
+  margin-left: 0;
+}
+
+.swiper-button-next {
+  right: 90px;
+  top: 60%;
+}
+
+.swiper-button-prev {
+  left: 90px;
+  top: 60%;
+}
+
+.swiper-pagination {
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 460px) {
+    .slider img {
+        width: calc(100%);
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
