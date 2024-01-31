@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
+
+}
+
+a{
+    text-decoration: none;
+    color: #3468C0;
+}
+
+.login-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+input {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 16px;
+    color: black;
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid black;
+    box-sizing: border-box;
+}
+
+.forgot-pass a{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    margin-top: 1.8rem;
+    padding: 10px;
+    background-image: linear-gradient( 108.7deg,  rgba(221,22,224,1) 11%, rgba(111,22,190,1) 88.2% );
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.media-login a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img .google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+a.google-login{
+    border: 1px solid #cacaca;
+}
+
+a.google-login span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+}
+
+img .github-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+a.github-login{
+    margin-top: 1rem;
+    border: 1px solid #cacaca;
+    background-color: #243B55;
+}
+
+a.github-login span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: #ffffff;
+}
