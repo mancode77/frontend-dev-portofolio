@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Dev - Pelajari dan Jelajahi Pengembangan Frontend</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
+        <button onclick="login()">Login</button>
+        <p class="register">don't have an account? <a href="register.html">Signup</a><p>
+        
+        <div>
+            <p>or login with another account</p>
+            <div class="media-login">
+                <a href="#" class="google-login"><img src="https://img.icons8.com/color/48/google-logo.png" class="google-img"><span>LOGIN WITH GOOGLE</span></a>
+            </div>
+            <div class="media-login">
+                <a href="#" class="github-login"><img src="https://img.icons8.com/ios-filled/50/github.png" class="github-img"><span>LOGIN WITH GITHUB</span></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
