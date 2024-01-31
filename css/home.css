@@ -1,4 +1,4 @@
-/* General Style */
+/* CSS Reset*/
 *,
 body {
   padding: 0;
@@ -7,8 +7,12 @@ body {
   font-family: sans-serif;
 }
 
-body {
-    height: 1000px;
+/* General Value CSS */
+:root {
+  /* Color Style */
+  --black-color: #000;
+  --white-color: #fff;
+  --green-color: #00fc13;
 }
 
 /* Home Style */
@@ -19,7 +23,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: var(--white-color);
 }
 
 #home {
@@ -34,7 +38,7 @@ section h3 {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px var(--black-color);
 }
 
 section h1 {
@@ -42,12 +46,12 @@ section h1 {
   font-size: 45px;
   font-weight: 500;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px 2px var(--black-color);
 }
 
 section p {
   font-size: 20px;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px var(--black-color);
   margin-bottom: 45px;
 }
 
@@ -62,8 +66,8 @@ section a {
 }
 
 section .btn1 {
-  background-color: #fff;
-  color: black;
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 section .btn1:hover {
@@ -72,8 +76,8 @@ section .btn1:hover {
 }
 
 section .btn2 {
-  background-color: #00fc13;
-  color: black;
+  background-color: var(--green-color);
+  color: var(--black-color);
 }
 
 section .btn2:hover {
@@ -83,7 +87,7 @@ section .btn2:hover {
 }
 
 .nameslideshow:after {
-  color: #00fc13;
+  color: var(--green-color);
   animation: changename 7s infinite linear;
   content: "";
 }
