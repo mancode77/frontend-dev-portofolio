@@ -19,7 +19,7 @@ a{
 .register-container {
     text-align: center;
     padding: 20px;
-    width: 50%;
+    width: 67%;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
@@ -96,4 +96,14 @@ a.github-login span{
     font-weight: 500;
     opacity: 0.6;
     color: #ffffff;
+}
+
+@media (max-width : 320px){
+    body{
+        width: 80%;
+    }
+    .login-container,
+    .register-container{
+        width: 50%;
+    }
 }
