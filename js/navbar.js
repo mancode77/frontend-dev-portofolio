@@ -1,19 +1,15 @@
-let openHamburger = document.querySelector("#openHam");
-let closeHamburger = document.querySelector("#closeHam");
-let navigationItems = document.querySelector("#navigation-items");
+const openHamburgerButton = document.getElementById("openHam");
+const closeHamburgerButton = document.getElementById("closeHam");
+const navigationItems = document.getElementById("navigation-items");
 
-const hamburgerEvent = (navigation, close, open) => {
-  navigationItems.style.display = navigation;
-  closeHam.style.display = close;
-  openHam.style.display = open;
-};
+function toggleHamburgerMenu() {
+ navigationItems.style.display = navigationItems.style.display === "flex" ? "none" : "flex";
+ closeHamburgerButton.style.display = navigationItems.style.display === "flex" ? "block" : "none";
+ openHamburgerButton.style.display = navigationItems.style.display === "flex" ? "none" : "block";
+}
 
-openHamburger.addEventListener("click", () =>
-  hamburgerEvent("flex", "block", "none")
-);
-closeHamburger.addEventListener("click", () =>
-  hamburgerEvent("none", "none", "block")
-);
+openHamburgerButton.addEventListener("click", toggleHamburgerMenu);
+closeHamburgerButton.addEventListener("click", toggleHamburgerMenu);
 
 //* prevent memory leaks
 openHamburger.removeEventListener("click", () =>
@@ -23,12 +19,10 @@ closeHamburger.removeEventListener("click", () =>
   hamburgerEvent("none", "none", "block")
 );
 
-window.onscroll = function() {scrollFunction()}
-
-function scrollFunction() {
-    if (document.body.scrollTop || document.documentElement.scrollTop > 130){
-        document.getElementById('navbar').style.backgroundColor = 'rgb(27, 24, 24)';
-    } else {
-        document.getElementById('navbar').style.backgroundColor = 'transparent';
-    }
+function handleScroll() {
+ const navbar = document.getElementById("navbar");
+ navbar.style.backgroundColor =
+   window.scrollY > 130 ? "rgb(27, 24, 24)" : "transparent";
 }
+
+window.addEventListener("scroll", handleScroll);
