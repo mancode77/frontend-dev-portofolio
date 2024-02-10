@@ -7,12 +7,14 @@
     <title>Frontend Dev - Pelajari dan Jelajahi Pengembangan Frontend</title>
 </head>
 <body>
+    <div id="failed-login">Akun atau password tidak ditemukan</div>
+    <div id="success-login">Login berhasil, Pindah ke halaman utama</div>
     <div class="login-container">
         <h1>Login</h1>
-        <input type="text" id="username" placeholder="Email">
+        <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
         <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
-        <button onclick="login()">Login</button>
+        <button id="login">Login</button>
         <p class="register">don't have an account? <a href="register.html">Signup Now</a><p>
         
         <div>
@@ -25,5 +27,7 @@
             </div>
         </div>
     </div>
+
+    <script src="js/login.js"></script>
 </body>
 </html>

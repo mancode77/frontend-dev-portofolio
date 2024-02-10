@@ -7,14 +7,16 @@
     <title>Frontend Dev - Pelajari dan Jelajahi Pengembangan Frontend</title>
 </head>
 <body>
+    <div id="failed-register">Respons jaringan tidak baik</div>
+    <div id="success-register">Register berhasil, Pindah ke halaman utama</div>
     <div class="register-container">
         <h1>Signup</h1>
-        <input type="text" placeholder="Username">
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder=" Create Password">
-        <input type="password" placeholder="Confirm Password">
-        <button onclick="Signup()">Register Now</button>
+        <input type="text" id="username" placeholder="Username">
+        <input type="text" id="password" placeholder="Password">
+        <button id="register">Register Now</button>
         <p class="register">Already have an account? <a href="login.html">Login</a></p>
+
+        <script src="js/register.js"></script>
     </div>
 </body>
 </html>
