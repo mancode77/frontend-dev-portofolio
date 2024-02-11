@@ -1,6 +1,7 @@
 function checkCookie() {
   const cookieName = "key";
   const myCookie = getCookie(cookieName);
+  
   if (myCookie === "") {
     window.location.href = "https://mancode77.github.io/frontend-dev-portofolio/login/login.html";
   } else {
