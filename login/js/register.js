@@ -1,3 +1,5 @@
+import { createCookie, setCookieExpiration } from './cookie.js'
+
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const btnRegister = document.getElementById("register");
@@ -52,6 +54,8 @@ async function sendDataToAPI() {
     } else {
       displayElement(successRegister, "block", DURATION_SUCCESS_REGISTER);
       removeTimeOutOnElement(successRegister, DURATION_SUCCESS_REGISTER);
+
+      createCookie('key', username.value, setCookieExpiration)
 
       setTimeout(() => {
         window.location.assign(
