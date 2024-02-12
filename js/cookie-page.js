@@ -2,7 +2,7 @@ function checkCookie() {
   const cookieName = "key";
   const myCookie = getCookie(cookieName);
 
-  if (myCookie === "") {
+  if (!myCookie) {
     redirectToLoginPage();
   } else {
     redirectToHomepageIfNeeded();
@@ -15,11 +15,7 @@ function getCookie(cookieName) {
   const cookieArray = decodedCookie.split(";");
 
   for (let i = 0; i < cookieArray.length; i++) {
-    let cookie = cookieArray[i];
-
-    while (cookie.charAt(0) === " ") {
-      cookie = cookie.substring(1);
-    }
+    let cookie = cookieArray[i].trim();
 
     if (cookie.indexOf(name) === 0) {
       return cookie.substring(name.length, cookie.length);
