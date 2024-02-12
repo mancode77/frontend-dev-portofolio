@@ -3,17 +3,9 @@ function checkCookie() {
   const myCookie = getCookie(cookieName);
 
   if (myCookie === "") {
-    window.location.assign("http://127.0.0.1:5500/login/login.html");
+    redirectToLoginPage();
   } else {
-    if (!sessionStorage.getItem("scriptExecuted")) {
-      redirectToHomepage();
-
-      sessionStorage.setItem("scriptExecuted", true);
-    }
-
-    function redirectToHomepage() {
-      window.location.assign("http://127.0.0.1:5500/");
-    }
+    redirectToHomepageIfNeeded();
   }
 }
 
@@ -35,6 +27,21 @@ function getCookie(cookieName) {
   }
 
   return "";
+}
+
+function redirectToLoginPage() {
+  window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/login/login.html");
+}
+
+function redirectToHomepageIfNeeded() {
+  if (!sessionStorage.getItem("scriptExecuted")) {
+    redirectToHomepage();
+    sessionStorage.setItem("scriptExecuted", true);
+  }
+}
+
+function redirectToHomepage() {
+  window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/");
 }
 
 window.onload = checkCookie;
