@@ -1,4 +1,4 @@
-import { createCookie, setCookieExpiration } from "./cookie.js";
+import { createCookie, calculateCookieExpiration } from "./cookie.js";
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -73,7 +73,7 @@ async function sendDataToAPI() {
 }
 
 btnLogin.addEventListener("click", function () {
-  createCookie("key", username.value, setCookieExpiration);
+  createCookie("key", username.value, calculateCookieExpiration);
 
   sendDataToAPI();
 });
