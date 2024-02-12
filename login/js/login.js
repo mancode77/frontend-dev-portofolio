@@ -57,13 +57,13 @@ async function sendDataToAPI() {
 
       setTimeout(() => {
         window.location.assign(
-          "http://127.0.0.1:5500/"
+          "https://mancode77.github.io/frontend-dev-portofolio/"
         );
       }, DURATION_FAILED_LOGIN_OR_REDIRECT_PAGE);
 
       clearTimeout(() => {
         window.location.assign(
-          "http://127.0.0.1:5500/"
+          "https://mancode77.github.io/frontend-dev-portofolio/"
         );
       }, DURATION_FAILED_LOGIN_OR_REDIRECT_PAGE);
     }

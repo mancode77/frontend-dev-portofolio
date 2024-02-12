@@ -3,7 +3,7 @@ function checkCookie() {
   const myCookie = getCookie(cookieName);
 
   if (myCookie === "") {
-    window.location.assign("http://127.0.0.1:5500/login/login.html");
+    window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/login/login.html");
   } else {
     if (!sessionStorage.getItem("scriptExecuted")) {
       redirectToHomepage();
@@ -12,7 +12,7 @@ function checkCookie() {
     }
 
     function redirectToHomepage() {
-      window.location.assign("http://127.0.0.1:5500/");
+      window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/");
     }
   }
 }
