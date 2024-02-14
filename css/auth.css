@@ -183,15 +183,15 @@ body {
 
 .hover-opacity {
   opacity: 1;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
 }
 
 .hover-opacity:hover {
   opacity: 0.8;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
 }
 
-.hover-icon {
+.hover-icon > svg path {
   transition: all 0.3s ease;
 }
 
