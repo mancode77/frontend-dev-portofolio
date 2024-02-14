@@ -1,4 +1,4 @@
-import { createCookie, setCookieExpiration } from './cookie.js'
+import { createCookie, calculateCookieExpiration } from "./cookie.js";
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -19,7 +19,13 @@ function displayElement(element, display, duration) {
   }, duration);
 }
 
+function setLoadingElement(element) {
+  element.innerHTML = '<div class="spinner-border spinner-border-sm"></div>';
+}
+
 async function sendDataToAPI() {
+  const btnOriginal = btnRegister.innerHTML;
+  setLoadingElement(btnRegister);
   const dataToSend = {
     username: username.value,
     password: password.value,
@@ -55,7 +61,7 @@ async function sendDataToAPI() {
       displayElement(successRegister, "block", DURATION_SUCCESS_REGISTER);
       removeTimeOutOnElement(successRegister, DURATION_SUCCESS_REGISTER);
 
-      createCookie('key', username.value, setCookieExpiration)
+      createCookie("key", username.value, calculateCookieExpiration);
 
       setTimeout(() => {
         window.location.assign(
@@ -72,6 +78,7 @@ async function sendDataToAPI() {
   } catch (error) {
     console.error("Error: ", error);
   }
+  btnRegister.innerHTML = btnOriginal;
 }
 
 btnRegister.addEventListener("click", function () {
