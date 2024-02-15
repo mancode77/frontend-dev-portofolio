@@ -138,7 +138,7 @@ body {
 }
 
 .login-left {
-  background-image: url("/images/man_programming.jpg");
+  background-image: url("../images/man_programming.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -243,7 +243,7 @@ html .form-control:focus {
 
 @media (max-width: 992px) {
   .login-right {
-    background-image: url("/images/man_programming.jpg");
+    background-image: url("../images/man_programming.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
