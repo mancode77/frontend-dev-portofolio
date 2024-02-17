@@ -41,3 +41,8 @@ function redirectToHomepage() {
 }
 
 window.onload = checkCookie;
+
+window.addEventListener('beforeunload', (event) => {
+  // Hapus semua item di local storage
+  localStorage.clear();
+});

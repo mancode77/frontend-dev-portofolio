@@ -29,6 +29,7 @@ async function sendDataToAPI() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Cookie": `key=${getCookie("key")}`
     },
     body: JSON.stringify(dataToSend),
   };
@@ -73,7 +74,5 @@ async function sendDataToAPI() {
 }
 
 btnLogin.addEventListener("click", function () {
-  createCookie("key", username.value, calculateCookieExpiration);
-
   sendDataToAPI();
 });
