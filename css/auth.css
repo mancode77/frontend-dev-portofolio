@@ -1,0 +1,275 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #09080a !important;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#failed-login {
+  background-color: #3f0000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  opacity: 0;
+  animation: fadeInOut 3s linear forwards;
+  z-index: 2;
+}
+
+@keyframes fadeInOutSuccessLogin {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#success-login {
+  background-color: #2e6542;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  opacity: 0;
+  animation: fadeInOutSuccessLogin 2s linear forwards;
+  z-index: 2;
+}
+
+@keyframes fadeInOutRegister {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#failed-register {
+  background-color: #3f0000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  opacity: 0;
+  animation: fadeInOutRegister 3s linear forwards;
+  z-index: 2;
+}
+
+@keyframes fadeInOutSuccessRegister {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#success-register {
+  background-color: #2e6542;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  opacity: 0;
+  animation: fadeInOutSuccessRegister 2s linear forwards;
+  z-index: 2;
+}
+
+.login-left {
+  background-image: url("../images/man_programming.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 24px;
+  flex: 1;
+}
+.login-left > :not(.layer-dark),
+.login-right > :not(.layer-dark) {
+  z-index: 1;
+}
+
+.login-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  flex: 1;
+}
+
+.layer-dark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 80%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.media-social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.hover-opacity {
+  opacity: 1;
+  transition: all 0.3s ease !important;
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease !important;
+}
+
+.hover-icon > svg path {
+  transition: all 0.3s ease;
+}
+
+.hover-icon:hover > svg path {
+  fill: #00fc13;
+  transition: all 0.3s ease;
+}
+
+.line-left-bottom {
+  position: absolute;
+  width: calc(50% - 50px);
+  left: 0;
+  height: 2px;
+  background: white;
+}
+
+.line-right-bottom {
+  position: absolute;
+  width: calc(50% - 50px);
+  right: 0;
+  height: 2px;
+  background: white;
+}
+
+html .form-control,
+html {
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: none !important;
+  outline: none !important;
+  transition: all 0.3s ease;
+  color: white !important;
+  height: 48px;
+}
+
+html .form-control:focus {
+  background-color: black;
+  border-color: rgba(0, 252, 21, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  background-color: #00fc13 !important;
+  min-height: 48px;
+  font-weight: 600 !important;
+  color: black !important;
+}
+
+@media (max-width: 992px) {
+  .login-right {
+    background-image: url("../images/man_programming.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+  #failed-login {
+    left: 30px;
+    right: 30px;
+    text-align: center;
+    transform: none;
+  }
+  #success-login {
+    left: 30px;
+    right: 30px;
+    text-align: center;
+    transform: none;
+  }
+  #failed-register {
+    left: 30px;
+    right: 30px;
+    text-align: center;
+    transform: none;
+  }
+  #success-register {
+    left: 30px;
+    right: 30px;
+    text-align: center;
+    transform: none;
+  }
+}

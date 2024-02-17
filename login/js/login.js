@@ -19,7 +19,13 @@ function displayElement(element, display, duration) {
   }, duration);
 }
 
+function setLoadingElement(element) {
+  element.innerHTML = '<div class="spinner-border spinner-border-sm"></div>';
+}
+
 async function sendDataToAPI() {
+  const btnOriginal = btnLogin.innerHTML;
+  setLoadingElement(btnLogin);
   const dataToSend = {
     username: username.value,
     password: password.value,
@@ -71,6 +77,7 @@ async function sendDataToAPI() {
   } catch (error) {
     console.error("Error: ", error);
   }
+  btnLogin.innerHTML = btnOriginal;
 }
 
 btnLogin.addEventListener("click", function () {
