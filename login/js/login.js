@@ -1,15 +1,34 @@
+/**
+ * Mendapatkan elemen HTML dengan ID yang ditentukan.
+ * 
+ * @param {string} id ID elemen yang ingin diambil.
+ * @returns {HTMLElement|null} Elemen dengan ID yang diberikan, atau null jika tidak ditemukan.
+ */
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const btnLogin = document.getElementById("login");
 const failedLogin = document.getElementById("failed-login");
 const successLogin = document.getElementById("success-login");
 
+/**
+ * Menghapus timeout yang disetel pada elemen setelah durasi tertentu.
+ * 
+ * @param {HTMLElement} element Elemen untuk menghapus timeoutnya.
+ * @param {number} duration Durasi dalam milidetik untuk menunggu sebelum menyembunyikan elemen.
+ */
 function removeTimeOutOnElement(element, duration) {
   clearTimeout(() => {
     element.style.display = "none";
   }, duration);
 }
 
+/**
+ * Menampilkan elemen selama durasi tertentu dan kemudian menyembunyikannya.
+ * 
+ * @param {HTMLElement} element Elemen untuk ditampilkan dan disembunyikan.
+ * @param {string} display Gaya tampilan yang akan disetel (misalnya, "block", "inline").
+ * @param {number} duration Durasi dalam milidetik untuk menampilkan elemen.
+ */
 function displayElement(element, display, duration) {
   element.style.display = display;
   setTimeout(() => {
@@ -17,13 +36,24 @@ function displayElement(element, display, duration) {
   }, duration);
 }
 
+/**
+ * Mengatur HTML bagian dalam elemen ke indikator pemuatan spinner.
+ * 
+ * @param {HTMLElement} element Elemen untuk menyetel kontennya.
+ */
 function setLoadingElement(element) {
   element.innerHTML = '<div class="spinner-border spinner-border-sm"></div>';
 }
 
+/**
+ * Mengirim data login ke API dan menangani responsnya.
+ * 
+ * @async
+ */
 async function sendDataToAPI() {
   const btnOriginal = btnLogin.innerHTML;
   setLoadingElement(btnLogin);
+
   const dataToSend = {
     username: username.value,
     password: password.value,

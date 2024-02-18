@@ -1,14 +1,23 @@
+/**
+ * Memeriksa apakah terdapat cookie tertentu dan melakukan tindakan berdasarkan ada/tidaknya cookie tersebut.
+ */
 function checkCookie() {
-  const cookieName = "key";
-  const myCookie = getCookie(cookieName);
+  const cookieName = "key"; // Nama cookie yang akan diperiksa
+  const myCookie = getCookie(cookieName); // Mendapatkan nilai cookie
 
   if (!myCookie) {
-    redirectToLoginPage();
+    redirectToLoginPage(); // Tidak ada cookie, redirect ke halaman login
   } else {
-    redirectToHomepageIfNeeded();
+    redirectToHomepageIfNeeded(); // Ada cookie, periksa dan redirect ke homepage jika perlu
   }
 }
 
+/**
+ * Mendapatkan nilai cookie dengan nama tertentu.
+ * 
+ * @param {string} cookieName Nama cookie yang ingin diambil nilainya.
+ * @returns {string|null} Nilai cookie jika ditemukan, null jika tidak.
+ */
 function getCookie(cookieName) {
   const name = cookieName + "=";
   const decodedCookie = decodeURIComponent(document.cookie);
@@ -22,22 +31,31 @@ function getCookie(cookieName) {
     }
   }
 
-  return "";
+  return null;
 }
 
+/**
+ * Mengalihkan pengguna ke halaman login.
+ */
 function redirectToLoginPage() {
   window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/login/login.html");
 }
 
+/**
+ * Mengalihkan pengguna ke homepage jika skrip belum dijalankan sebelumnya.
+ */
 function redirectToHomepageIfNeeded() {
   if (!sessionStorage.getItem("scriptExecuted")) {
     redirectToHomepage();
-    sessionStorage.setItem("scriptExecuted", true);
+    sessionStorage.setItem("scriptExecuted", true); // Tandai skrip sudah dijalankan
   }
 }
 
+/**
+ * Mengalihkan pengguna ke homepage.
+ */
 function redirectToHomepage() {
   window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/");
 }
 
-window.onload = checkCookie;
+window.onload = checkCookie; // Jalankan checkCookie saat halaman dimuat
