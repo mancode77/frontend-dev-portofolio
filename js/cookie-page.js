@@ -60,7 +60,7 @@ function redirectToHomepageIfNeeded() {
  * Mengalihkan pengguna ke homepage.
  */
 function redirectToHomepage() {
-  window.location.assign(`${PROD_URI}/login/login.html`);
+  window.location.assign(`${PROD_URI}`);
 }
 
 window.onload = checkCookie; // Jalankan checkCookie saat halaman dimuat

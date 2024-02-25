@@ -116,6 +116,7 @@ async function sendDataToAPI() {
   } catch (error) {
     console.error("Error: ", error);
   }
+  
   btnLogin.innerHTML = btnOriginal;
 }
 
