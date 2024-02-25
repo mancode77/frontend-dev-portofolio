@@ -31,14 +31,19 @@ function getCookie(cookieName) {
     }
   }
 
+  console.log(cookieArray);
+
   return null;
 }
+
+const DEV_URI = "http://127.0.0.1:5500" // Dev Env
+const PROD_URI = "https://mancode77.github.io/frontend-dev-portofolio"; // Prod Env
 
 /**
  * Mengalihkan pengguna ke halaman login.
  */
 function redirectToLoginPage() {
-  window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/login/login.html");
+  window.location.assign(`${PROD_URI}/login/login.html`);
 }
 
 /**
@@ -55,7 +60,7 @@ function redirectToHomepageIfNeeded() {
  * Mengalihkan pengguna ke homepage.
  */
 function redirectToHomepage() {
-  window.location.assign("https://mancode77.github.io/frontend-dev-portofolio/");
+  window.location.assign(`${PROD_URI}/login/login.html`);
 }
 
 window.onload = checkCookie; // Jalankan checkCookie saat halaman dimuat

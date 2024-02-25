@@ -1,6 +1,6 @@
 /**
  * Mendapatkan elemen HTML dengan ID yang ditentukan.
- * 
+ *
  * @param {string} id ID elemen yang ingin diambil.
  * @returns {HTMLElement|null} Elemen dengan ID yang diberikan, atau null jika tidak ditemukan.
  */
@@ -12,7 +12,7 @@ const successLogin = document.getElementById("success-login");
 
 /**
  * Menghapus timeout yang disetel pada elemen setelah durasi tertentu.
- * 
+ *
  * @param {HTMLElement} element Elemen untuk menghapus timeoutnya.
  * @param {number} duration Durasi dalam milidetik untuk menunggu sebelum menyembunyikan elemen.
  */
@@ -24,7 +24,7 @@ function removeTimeOutOnElement(element, duration) {
 
 /**
  * Menampilkan elemen selama durasi tertentu dan kemudian menyembunyikannya.
- * 
+ *
  * @param {HTMLElement} element Elemen untuk ditampilkan dan disembunyikan.
  * @param {string} display Gaya tampilan yang akan disetel (misalnya, "block", "inline").
  * @param {number} duration Durasi dalam milidetik untuk menampilkan elemen.
@@ -38,7 +38,7 @@ function displayElement(element, display, duration) {
 
 /**
  * Mengatur HTML bagian dalam elemen ke indikator pemuatan spinner.
- * 
+ *
  * @param {HTMLElement} element Elemen untuk menyetel kontennya.
  */
 function setLoadingElement(element) {
@@ -47,7 +47,7 @@ function setLoadingElement(element) {
 
 /**
  * Mengirim data login ke API dan menangani responsnya.
- * 
+ *
  * @async
  */
 async function sendDataToAPI() {
@@ -63,12 +63,14 @@ async function sendDataToAPI() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Cookie": `key=${getCookie("key")}`
     },
     body: JSON.stringify(dataToSend),
   };
 
   const apiUrl = "https://api-blind-code.vercel.app/login";
+  const DEV_URI = "http://127.0.0.1:5500"; // Dev Env
+  const PROD_URI =
+    "https://mancode77.github.io/frontend-dev-portofolio"; // Prod Env
 
   try {
     const response = await fetch(apiUrl, requestOptions);
@@ -91,15 +93,11 @@ async function sendDataToAPI() {
       removeTimeOutOnElement(successLogin, DURATION_SUCCESS_LOGIN);
 
       setTimeout(() => {
-        window.location.assign(
-          "https://mancode77.github.io/frontend-dev-portofolio/"
-        );
+        window.location.assign(`${PROD_URI}`);
       }, DURATION_FAILED_LOGIN_OR_REDIRECT_PAGE);
 
       clearTimeout(() => {
-        window.location.assign(
-          "https://mancode77.github.io/frontend-dev-portofolio/"
-        );
+        window.location.assign(`${PROD_URI}`);
       }, DURATION_FAILED_LOGIN_OR_REDIRECT_PAGE);
     }
   } catch (error) {
