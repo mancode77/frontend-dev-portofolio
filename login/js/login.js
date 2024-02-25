@@ -10,6 +10,18 @@ const btnLogin = document.getElementById("login");
 const failedLogin = document.getElementById("failed-login");
 const successLogin = document.getElementById("success-login");
 
+// Fungsi untuk membuat cookie dengan nama, nilai, dan kedaluwarsa yang ditentukan
+function createCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    // Mengatur tanggal kedaluwarsa menjadi 1 minggu dari saat ini
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
 /**
  * Menghapus timeout yang disetel pada elemen setelah durasi tertentu.
  *
@@ -69,8 +81,7 @@ async function sendDataToAPI() {
 
   const apiUrl = "https://api-blind-code.vercel.app/login";
   const DEV_URI = "http://127.0.0.1:5500"; // Dev Env
-  const PROD_URI =
-    "https://mancode77.github.io/frontend-dev-portofolio"; // Prod Env
+  const PROD_URI = "https://mancode77.github.io/frontend-dev-portofolio"; // Prod Env
 
   try {
     const response = await fetch(apiUrl, requestOptions);
@@ -89,6 +100,8 @@ async function sendDataToAPI() {
         DURATION_FAILED_LOGIN_OR_REDIRECT_PAGE
       );
     } else {
+      createCookie("key", username.value, 7);
+
       displayElement(successLogin, "block", DURATION_SUCCESS_LOGIN);
       removeTimeOutOnElement(successLogin, DURATION_SUCCESS_LOGIN);
 
